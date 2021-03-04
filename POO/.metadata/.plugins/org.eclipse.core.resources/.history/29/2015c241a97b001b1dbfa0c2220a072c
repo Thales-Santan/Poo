@@ -1,0 +1,11 @@
+package exercicio2;
+
+public class Aviao {
+	String modelo;
+	int quantidadeDeLugares;
+	double tamanhoMetros;
+
+	public void Aviao (String modelo, int quantidadeLugares ,double tamanhoMetros) {
+		System.out.printf("O modelo do avião é %s, tem %d lugares e o tamanho dele é %.0f metros.",modelo,quantidadeLugares,tamanhoMetros);
+	}
+}

@@ -1,0 +1,13 @@
+
+public class CadFun {
+
+	public static void main(String[] args) {
+		//teste de programador
+		Funcionario colaborador1 = new Funcionario("Carlos", 1,10,15.25);
+		
+		
+		System.out.println("Salario do "+colaborador1.getNome()+ "é R$"+colaborador1.salario());
+
+	}
+
+}

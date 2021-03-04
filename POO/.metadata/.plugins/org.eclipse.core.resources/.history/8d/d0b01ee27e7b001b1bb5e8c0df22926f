@@ -1,0 +1,14 @@
+package exercicio2;
+import java.util.Scanner;
+
+public class EX2 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		Aviao aeronave = new Aviao();
+		System.out.println("Digite o modelo do aviao, sua capacidade e seu tamanho(separando por espaços)");
+		aeronave.Aviao(teclado.nextLine(),teclado.nextInt(),teclado.nextDouble());
+		teclado.close();
+	}
+
+}

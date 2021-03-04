@@ -1,0 +1,9 @@
+package ExerciciosPOO;
+
+public class Pessoa {
+	private String primeiroNome;
+	private String SegundoNome;
+	private String ultimoNome;
+	
+	
+}

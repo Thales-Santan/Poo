@@ -1,0 +1,18 @@
+package exercicio2;
+
+public class Aviao {
+	String modelo;
+	int quantidadeDeLugares;
+	double tamanhoMetros;
+
+	public void Aviao (String modelo) {
+		
+	}
+	public void Aviao (int lugares) {
+		
+	}
+	
+	public void Aviao (double tamanhoMetros) {
+		
+	}
+}

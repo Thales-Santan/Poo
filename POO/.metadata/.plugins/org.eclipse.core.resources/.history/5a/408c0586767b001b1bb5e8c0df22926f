@@ -1,0 +1,11 @@
+package ExerciciosPOO;
+
+public class EX1 {
+
+	public static void main(String[] args) {
+		Cliente cliente = new Cliente();
+		
+		cliente.Cliente("Joao",24,"123.456.789-00");
+	}
+
+}

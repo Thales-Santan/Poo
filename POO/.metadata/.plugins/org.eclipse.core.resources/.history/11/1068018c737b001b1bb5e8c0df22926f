@@ -1,0 +1,19 @@
+package ExerciciosPOO;
+
+public class Pessoa {
+	private String primeiroNome;
+	private String segundoNome;
+	private String ultimoNome;
+	
+	public Pessoa (String primeiro,String segundo, String ultimo)
+	{
+		primeiroNome = primeiro;
+		segundoNome = segundo;
+		ultimoNome = ultimo;
+	}
+	public String getNomeCompleto()
+	{
+		String nomeCompleto = primeiroNome +" "+segundoNome+" "+ultimoNome;
+		return nomeCompleto;
+	}
+}

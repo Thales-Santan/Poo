@@ -1,0 +1,14 @@
+package exercicio1;
+import java.util.Scanner;
+
+public class EX1 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		Cliente cliente = new Cliente();
+		
+		cliente.Cliente(teclado.nextLine(),teclado.nextLine(), teclado.nextInt());
+		teclado.close();
+	}
+
+}

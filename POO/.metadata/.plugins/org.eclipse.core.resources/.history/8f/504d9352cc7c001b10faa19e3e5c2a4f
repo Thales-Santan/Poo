@@ -1,0 +1,37 @@
+package APLICACAO;
+import java.util.Scanner;
+
+import CLASSES.Conta;
+import CLASSES.ContaEspecial;
+
+public class Teste { 
+
+    public static void main(String[] args) {
+        
+        Scanner leia = new Scanner(System.in);
+        Conta conta3 = new Conta(345, "111.222.333-00", true);
+        ContaEspecial cliEspecial1 = new ContaEspecial(555,1000);
+        double valor;
+        char opcao;
+        
+        System.out.println("Digite o valor:");
+        valor = leia.nextDouble();
+        System.out.println("Debito ou Credito? D/C:");
+        opcao = leia.next().toUpperCase().charAt(0);
+        if (opcao =='D')
+        {
+            cliEspecial1.debito(valor);
+        }
+        else if (opcao =='C') {
+            
+        	cliEspecial1.credito(valor);
+        } else
+        {
+            System.out.println("Opção invalida!!!");
+        }
+        System.out.println("Saldo atual: "+cliEspecial1.getSaldo());
+        System.out.println("Limite: "+ cliEspecial1.getLimite());
+        leia.close();
+    }
+
+}

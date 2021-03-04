@@ -1,0 +1,12 @@
+package exercicio3;
+import java.util.Scanner;
+
+public class EX3 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		ProdutoEletronico celular = new ProdutoEletronico(teclado.nextInt());
+		System.out.println(celular);
+	}
+
+}

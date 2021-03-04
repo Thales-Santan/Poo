@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Thales\Desktop\turma18G\Java\POO\.metadata\.plugins\org.eclipse.jdt.core
+1570852477.index
+2351349075.index
+1887079466.index

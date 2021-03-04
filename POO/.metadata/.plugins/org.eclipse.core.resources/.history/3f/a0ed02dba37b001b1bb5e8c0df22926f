@@ -1,0 +1,19 @@
+package exercicio3;
+
+public class ProdutoEletronico {
+	public int ram;
+	public double custo;
+	public String modelo;
+	
+	
+	public ProdutoEletronico(int ram) {
+		this.ram = ram;
+		
+	}
+	public ProdutoEletronico (double custo) {
+		this.custo = custo;
+	}
+	public ProdutoEletronico (String modelo) {
+		this.modelo = modelo;
+	}
+}

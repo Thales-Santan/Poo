@@ -1,0 +1,20 @@
+package exercicio2;
+import java.util.Scanner;
+
+public class EX2 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		Aviao aeronave = new Aviao();
+		
+		System.out.println("Qual o modelo do aviao?");
+			aeronave.Aviao(teclado.nextLine());
+		System.out.println("Qual a capacidade de pessoas do aviao?");
+			aeronave.Aviao(teclado.nextInt());
+		System.out.println("Qual o tamanho do aviao em metros?");
+			aeronave.Aviao(teclado.nextDouble());
+		
+		teclado.close();
+	}
+
+}
