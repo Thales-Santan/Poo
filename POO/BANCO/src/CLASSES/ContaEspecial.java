@@ -7,7 +7,7 @@ public class ContaEspecial extends Conta {
 	
 	//ATRIBUTO
 	private double limite;
-	private double usarLimite;
+	//private int quantidadeMovimentos =0;
 	
 	//CONSTRUTOR
 	//public ContaEspecial(int numero, double limite) {
@@ -25,6 +25,9 @@ public class ContaEspecial extends Conta {
 		this.limite = limite;
 	}
 	//ENCAPSULAMENTO
+	//public void setQuantidadeMovimentos() {
+	//	this.quantidadeMovimentos+=1;
+	//}
 	public double getLimite() {
 		return limite;
 	}
@@ -33,31 +36,43 @@ public class ContaEspecial extends Conta {
 	}
 	//metodos
 	public void usarlimite(double valor) {
-		int contador =0;
+		//double saldo = this.getSaldo();
 		if (valor <= saldo) {
-			this.saldo = saldo - valor;
+			this.saldo = saldo- valor;
 			System.out.println("Debito aprovado!!");
 		}
-		else if (valor > saldo && valor<=limite && contador<=10) {
-			limite = (saldo+limite) - valor;
-			saldo = 0;
+		else if (valor<=limite && valor>saldo ) {
+			//limite = (saldo+limite) - valor;
+			//saldo = valor;
+			//saldo-=valor;
+			//limite = limite-saldo;
+			//limite -=valor;
+			//saldo += valor;
+			limite = limite -(valor-saldo);
+			saldo =0;
 			System.out.println("Debito aprovado!!");
-			System.out.println("Voce entrou no limite especial. Verifique seu saldo e limite no seu App.");
-			contador++;
+			System.out.println("Voce usou do seu Limite Especial. Verifique seu saldo e limite no seu App.");
 		}
+		//teste else inicio
+		else if(valor > limite && valor > saldo && valor<(saldo+limite)) {
+			limite = limite -(valor-saldo);
+			saldo =0;
+			System.out.println("Debito aprovado!!");
+			System.out.println("Voce usou do seu Limite Especial. Verifique seu saldo e limite no seu App.");
+		}//teste else fim
 		else if (valor > (saldo+limite)) {
 			System.out.println("Esta operação excede o seu Saldo e o Limite!");
 		}
 		else if(saldo == 0 && valor >limite) {
 			System.out.println("Voce não tem saldo e limite suficiente!");
-		}
-		if (contador>10) {
-			System.out.println("Voce excedeu a quantidade de movimentos do limite da sua conta!");
-			
-		}
-		
+		}		
     }
-}
+	/*@Override
+	public void credito(double valor) {
+		super.credito(valor);
+		setQuantidadeMovimentos();*/
+	}
+
 
 
 

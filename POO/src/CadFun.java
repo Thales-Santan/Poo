@@ -37,7 +37,7 @@ public class CadFun {
 					double adicional = leia.nextDouble();
 					lista.add(new Terceiro (nome, matricula ,horasTrabalhadas, valorHora, adicional));
 				}else {
-					lista.add(new Terceiro (nome, matricula ,horasTrabalhadas, valorHora));
+					lista.add(new Funcionario (nome, matricula ,horasTrabalhadas, valorHora));
 				}
 				
 			}

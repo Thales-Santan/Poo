@@ -2,6 +2,7 @@ package APLICACAO;
 
 import java.util.Scanner;
 
+import CLASSES.ContaEspecial;
 import CLASSES.ContaPoupanca;
 
 public class CaixaEletronico 
@@ -16,11 +17,11 @@ public class CaixaEletronico
 		double valor;//usada para guardar o valor q o usuario movimenta
 		
 		//vetor que guarda as opcoes de conta
-		String opcoes[] = {"[1] |POUPANÇA|", "[2] |OUTRO|"};
+		String opcoes[] = {"[1] |POUPANÇA|", "[2] |OUTRO|","[3] |ESPECIAL|"};
 		
 		//criei o objeto conta1
 		ContaPoupanca conta1 = new ContaPoupanca(1,"1",25);
-		
+		ContaEspecial conta3 = new ContaEspecial(3,"3",1000.00);
 		//Textos so pra deixar bonito
 		System.out.print("|BANCO BANCO|");
 		System.out.print("\n|O BANCO DOS BANCOS|");
@@ -127,6 +128,52 @@ public class CaixaEletronico
 					operacoes++;
 				}while(operacoes<10 && opcao=='S');
 				
+				break;
+			}	
+			case 3:
+			{
+				System.out.printf("\nCONTA %s", opcoes[2]);
+				
+				do
+				{
+					System.out.printf("\nSALDO ATUAL: %.2f", conta3.getSaldo());
+					System.out.printf("\nLIMITE ESPECIAL ATUAL: %.2f", conta3.getLimite());
+					System.out.println();//Pular uma linha para separar a pergunta seguinte dessa parte
+					
+					System.out.print("\nDEBITO OU CREDITO? [D] [C]: ");
+					movimento = scan.next().toUpperCase().charAt(0);
+				
+					if(movimento=='D') 
+					{
+						System.out.print("DIGITE O VALOR: ");
+						valor = scan.nextDouble();
+						//conta3.debito(valor);
+						conta3.usarlimite(valor);
+					}
+					else if(movimento=='C') 
+					{
+						System.out.print("DIGITE O VALOR: ");
+						valor = scan.nextDouble();
+						conta3.credito(valor);	
+					}
+					else
+					{
+						System.out.print("OPÇÃO INVÁLIDA!");
+					}
+					
+					System.out.print("\nDESEJA FAZER OUTRA OPERAÇÃO ? [S] SIM , [N] NÃO: ");
+					opcao = scan.next().toUpperCase().charAt(0);
+				
+					operacoes++;
+				}while(operacoes<10 && opcao=='S');
+				
+				//Msg para o usuario apos 10 movimentaçoes
+				if (operacoes == 10) {
+					System.out.println("Voce chegou ao limite de 10 movimentações");
+				}
+				
+				System.out.printf("\nSALDO ATUAL: %.2f", conta3.getSaldo());
+				System.out.printf("\nLIMITE ESPECIAL ATUAL: %.2f", conta3.getLimite());
 				break;
 			}	
 		}
