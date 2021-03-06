@@ -39,7 +39,7 @@ public class ContaEspecial extends Conta {
 			System.out.println("Debito aprovado!!");
 			System.out.println("Voce usou do seu Limite Especial. Verifique seu saldo e limite no seu App.");
 		}
-		else if(valor >= limite && valor > super.getSaldo() && valor<=(super.getSaldo()+limite)) {
+		else if(valor > limite && valor > super.getSaldo() && valor<(super.getSaldo()+limite)) {
 			double p = valor - super.getSaldo();
 			super.credito(p);
 			limite = limite - p;
