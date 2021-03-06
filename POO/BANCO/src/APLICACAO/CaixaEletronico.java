@@ -147,7 +147,6 @@ public class CaixaEletronico
 					{
 						System.out.print("DIGITE O VALOR: ");
 						valor = scan.nextDouble();
-						//conta3.debito(valor);
 						conta3.usarlimite(valor);
 					}
 					else if(movimento=='C') 

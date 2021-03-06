@@ -4,7 +4,7 @@ public class Conta {
 	//Atributos da classe
 	private int numero;
 	private String cpf;
-	protected double saldo;
+	private double saldo;
 	private boolean ativa;
 	 
 	//construtor
@@ -61,9 +61,8 @@ public class Conta {
 	}
 	
 	public void debito (double valor) {
-		if(this.saldo>=valor) {
+		if( valor<= this.saldo) {
 			this.saldo = this.saldo - valor;
-			
 		}
 	
 	}
