@@ -1,33 +1,28 @@
 package CLASSES;
 
-import java.util.Scanner;
-
 public class ContaCorrente extends Conta {
-	Scanner leia = new Scanner (System.in);
+	 protected int contadorTalao;
 
-    private int contadorTalao;
-    
+	    //CONSTRUTOR
+	    public ContaCorrente(int numero, String cpf, int contadorTalao) {
+	        super(numero, cpf);
+	        this.contadorTalao = contadorTalao;
+	    }
+	    //ENCAPSULAMENTO
+	    public int getContadorTalao() {
+	        return contadorTalao;
+	    }
 
-    //CONSTRUTOR
-    public ContaCorrente(int numero, String cpf, boolean ativa, int contadorTalao) {
-        super(numero, cpf, ativa);
-        this.contadorTalao = contadorTalao;
-    }
-    
-    //ENCAPSULAMENTO
-    public int getContadorTalao() {
-        return contadorTalao;
-    }
+	    public void setContadorTalao(int contadorTalao) {
+	        this.contadorTalao = contadorTalao;
+	    }
+	   
+	   
+	    public void pediTalao()
+	    {
+	    	contadorTalao--;	
+	    	System.out.printf("Quantidade de talões: %d", contadorTalao);
+	    }   
+	}
 
-    public void setContadorTalao(int contadorTalao) {
-        this.contadorTalao = contadorTalao;
-    }
-   
-    public void pediTalao()
-    {
-    	contadorTalao--;	
-    	System.out.printf("QUANTIDADE DE TALÕES DISPONIVEIS: %d", contadorTalao);
-    	
-    }   
-}
 
