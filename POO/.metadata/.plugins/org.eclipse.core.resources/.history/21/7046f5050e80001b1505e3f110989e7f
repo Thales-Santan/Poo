@@ -28,7 +28,7 @@ public class CaixaEletronico {
 		
 		//criei o objeto conta1
 		ContaPoupanca conta1 = new ContaPoupanca(1,"1",25);
-		ContaCorrente conta2 = new ContaCorrente(2,"2",3);
+		ContaCorrente conta2 = new ContaCorrente(2,"2",true,3);
 		ContaEspecial conta3 = new ContaEspecial(3,"3",1000);
 		ContaEmpresarial conta4 = new ContaEmpresarial(4,"4",10000);
 		ContaEstudantil conta5 = new ContaEstudantil(5,"5",0,true);

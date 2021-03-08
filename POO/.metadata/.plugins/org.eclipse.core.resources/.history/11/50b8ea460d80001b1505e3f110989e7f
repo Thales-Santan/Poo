@@ -14,7 +14,6 @@ public class CaixaEletronico {
 	
 	public static void main(String[] args) 
 	{
-
 		Scanner scan = new Scanner(System.in);
 		int opcao;// variavel utilizada para saber se o usuario deseja continuar
 		int data;// usada para saber o aniversario da poupanca
@@ -114,7 +113,7 @@ public class CaixaEletronico {
 			}
 			case 2:
 			{
-				System.out.printf("\nCONTA %s", opcoes[1]);
+				System.out.printf("\nCONTA %s", opcoes[1],true);
 				
 				do
 				{
@@ -227,17 +226,15 @@ public class CaixaEletronico {
                 System.out.print("\nDEBITO OU CREDITO? [D] [C]: ");
                 movimento = scan.next().toUpperCase().charAt(0);
 
-                
+                System.out.print("DIGITE O VALOR: ");
+                valor = scan.nextDouble();
+
                 if(movimento=='D') 
                 {
-                	System.out.print("DIGITE O VALOR: ");
-                    valor = scan.nextDouble();
                     conta4.debito(valor);
                 }
                 else if(movimento=='C') 
                 {
-                	System.out.print("DIGITE O VALOR: ");
-                    valor = scan.nextDouble();
                     conta4.credito(valor);
                 }
                 else
